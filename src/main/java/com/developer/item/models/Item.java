@@ -1,14 +1,14 @@
 package com.developer.item.models;
 
-public class item {
+public class Item {
 
 	private Producto producto;
 	private Integer cantidad;
 
-	public item() {
+	public Item() {
 	}
 
-	public item(Producto producto, Integer cantidad) {
+	public Item(Producto producto, Integer cantidad) {
 		this.producto = producto;
 		this.cantidad = cantidad;
 	}
