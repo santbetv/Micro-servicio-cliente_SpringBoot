@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.developer.item.models.Item;
 import com.developer.item.models.Producto;
 
-@Service
+@Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService {
 
 	private RestTemplate clienteRest;
