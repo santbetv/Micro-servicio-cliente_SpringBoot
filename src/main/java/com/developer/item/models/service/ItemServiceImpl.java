@@ -26,7 +26,9 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<Item> findAll() {
 		
-		List<Producto> productos = Arrays.asList(  clienteRest.getForObject("http://localhost:8001/listar", Producto[].class));
+		
+		
+		List<Producto> productos = Arrays.asList(  clienteRest.getForObject("http://localhost:8001/api/producto/listar", Producto[].class));
 		
 		/**
 		 * Los objetos de tipo List tienen los metodos stream para convertir la lista en un flujo
@@ -48,8 +50,8 @@ public class ItemServiceImpl implements ItemService {
 		Map<String, String> pathVariables = new HashMap<String, String>();
 		pathVariables.put("id", id.toString());
 		
-		
-		Producto producto = clienteRest.getForObject("http://localhost:8001/ver/{id}", Producto.class, pathVariables);
+		//indica api , los datos a capturar, la variables a buscar
+		Producto producto = clienteRest.getForObject("http://localhost:8001/api/producto/ver/{id}", Producto.class, pathVariables);
 		
 		return new Item(producto, cantidad);
 	}
