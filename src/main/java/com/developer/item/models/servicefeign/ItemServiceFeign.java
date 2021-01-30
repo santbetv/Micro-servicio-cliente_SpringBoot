@@ -12,7 +12,6 @@ import com.developer.item.clientefeign.ProductoClienteRest;
 import com.developer.item.models.Item;
 import com.developer.item.models.service.ItemService;
 
-
 /**
  * Ejemplo para consumo de tipo Feign
  * 
@@ -28,16 +27,12 @@ import com.developer.item.models.service.ItemService;
 @Service("serviceFeign")
 public class ItemServiceFeign implements ItemService {
 
-	private ProductoClienteRest clienteFeign;
-	
 	@Autowired
-	public ItemServiceFeign(ProductoClienteRest clienteFeign) {
-		this.clienteFeign = clienteFeign;
-	}
+	private ProductoClienteRest clienteFeign;
 
 	@Override
 	public List<Item> findAll() {
-		
+
 		return clienteFeign.listar().stream().map(p -> new Item(p, 1)).collect(Collectors.toList());
 	}
 

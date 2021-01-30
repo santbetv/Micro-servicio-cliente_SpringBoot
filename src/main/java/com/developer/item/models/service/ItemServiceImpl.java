@@ -16,13 +16,9 @@ import com.developer.item.models.Producto;
 @Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService {
 
+	@Autowired
 	private RestTemplate clienteRest;
 	
-	@Autowired
-	public ItemServiceImpl(RestTemplate clienteRest) {
-		this.clienteRest = clienteRest;
-	}
-
 	@Override
 	public List<Item> findAll() {
 		

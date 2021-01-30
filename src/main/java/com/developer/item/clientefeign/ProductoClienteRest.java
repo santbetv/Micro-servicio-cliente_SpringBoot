@@ -19,7 +19,9 @@ import com.developer.item.models.Producto;
  *
  */
 
-@FeignClient(name = "servicio-productos", url = "http://localhost:8001/api/producto")
+// @FeignClient(name = "servicio-productos", url = "http://localhost:8001/api/producto")
+// se implementa con ribbon para balanceo de carga 
+@FeignClient(name = "servicio-productos")
 public interface ProductoClienteRest {
 	
 	

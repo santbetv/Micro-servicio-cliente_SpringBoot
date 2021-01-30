@@ -3,6 +3,7 @@ package com.developer.item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author rizzoli
  *
  */
+@RibbonClient(name = "servicio-productos")
 @EnableFeignClients 
 @SpringBootApplication
 public class SprintbootServicioItemApplication {

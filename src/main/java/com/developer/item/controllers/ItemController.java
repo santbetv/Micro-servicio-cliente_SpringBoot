@@ -15,8 +15,9 @@ import com.developer.item.models.service.ItemService;
 public class ItemController {
 	
 	//Se coloca el nombre del ItemServiceFeing, o RestTemplate indicando cual inyectar
-	@Autowired
+	
 	//@Qualifier("serviceRestTemplate")
+	@Autowired
 	@Qualifier("serviceFeign")
 	private ItemService itemService;
 
