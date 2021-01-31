@@ -24,7 +24,7 @@ public class ItemServiceImpl implements ItemService {
 		
 		
 		
-		List<Producto> productos = Arrays.asList(  clienteRest.getForObject("http://localhost:8001/api/producto/listar", Producto[].class));
+		List<Producto> productos = Arrays.asList(  clienteRest.getForObject("http://servicio-productos/listar", Producto[].class));
 		
 		/**
 		 * Los objetos de tipo List tienen los metodos stream para convertir la lista en un flujo
@@ -47,7 +47,7 @@ public class ItemServiceImpl implements ItemService {
 		pathVariables.put("id", id.toString());
 		
 		//indica api , los datos a capturar, la variables a buscar
-		Producto producto = clienteRest.getForObject("http://localhost:8001/api/producto/ver/{id}", Producto.class, pathVariables);
+		Producto producto = clienteRest.getForObject("http://servicio-productos/ver/{id}", Producto.class, pathVariables);
 		
 		return new Item(producto, cantidad);
 	}

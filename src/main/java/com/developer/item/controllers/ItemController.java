@@ -17,8 +17,9 @@ public class ItemController {
 	//Se coloca el nombre del ItemServiceFeing, o RestTemplate indicando cual inyectar
 	
 	//@Qualifier("serviceRestTemplate")
+	//@Qualifier("serviceFeign")
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceRestTemplate")
 	private ItemService itemService;
 
 	@GetMapping("/listar")

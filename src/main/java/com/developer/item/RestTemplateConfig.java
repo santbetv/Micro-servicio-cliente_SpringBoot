@@ -1,5 +1,6 @@
 package com.developer.item;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConfig {
 	
 	@Bean("clienteRest")
+	@LoadBalanced //anotacion que permite balanceo de carga en rest-template
 	public RestTemplate registrarRestTeamplate() {
 		return  new RestTemplate();
 	}

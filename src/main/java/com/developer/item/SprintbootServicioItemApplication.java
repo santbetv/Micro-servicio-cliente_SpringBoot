@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * 
  * Ejemplo
  * 
- * Con EnableFeignClients, habiliata lso clientes feing y permite inyectar estos 
+ * Con EnableFeignClients, habilita los clientes feing y permite inyectar estos 
  * componentes, en clase service, para Autowired
  * 
  * @author rizzoli

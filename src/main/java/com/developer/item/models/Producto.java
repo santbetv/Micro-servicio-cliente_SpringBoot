@@ -11,7 +11,7 @@ public class Producto {
 	private Double precio;
 	//Nuevos valores de Java8 en adelante
 	private LocalDate fechaCreacion;
-	
+	private Integer port;
 	
 	
 	public Long getId() {
@@ -37,6 +37,12 @@ public class Producto {
 	}
 	public void setFechaCreacion(LocalDate fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
+	}
+	public Integer getPort() {
+		return port;
+	}
+	public void setPort(Integer port) {
+		this.port = port;
 	}
 	
 	
